@@ -1,16 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main -prints an error message
+ * main - Entry point
  *
- * Description: main prints out an error mmeesage to the stderr
  *
- * Return : returns 1 because it fails
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
+
 {
-	fwrite("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 39, 1, stderr);
-        exit(EXIT_FAILURE);
+
+	printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+
 	return (1);
+
 }
