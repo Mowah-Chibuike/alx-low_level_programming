@@ -2,14 +2,15 @@
 /**
  * main - prints out a string
  *
- * Description:  prints exactly 'Programming is like building a multilingual puzzle', followed by a new line.
+ * Description:  prints 'Programming is like building a multilingual puzzle'
  *
- * Returns: function returns 0
+ * Return: returns 0 if function is successful
  */
 
 int main(void)
 {
 	char str[] = "\"Programming is like building a multilingual puzzle";
+
 	puts(str);
-	return 0;
+	return (0);
 }
