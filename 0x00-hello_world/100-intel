@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -masm=intel -Og -fverbose-asm $(echo $CFILE); cat $(echo "$(echo $CFILE | cut -f 1 -d '.').o")
+gcc -S -masm=intel $(echo $CFILE); cat $(echo "$(echo $CFILE | cut -f 1 -d '.').o")
