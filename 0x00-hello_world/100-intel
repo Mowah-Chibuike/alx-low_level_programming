@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $(echo $CFILE) | cat $(echo "$(echo $CFILE | cut -f 1 -d '.').o")
+gcc -S $(echo $CFILE); cat $(echo "$(echo $CFILE | cut -f 1 -d '.').o")
