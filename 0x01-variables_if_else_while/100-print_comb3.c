@@ -15,7 +15,7 @@ int main(void)
 
 	while (i <= b && b != -1)
 	{
-		while (j <= b)
+		while (b >= j)
 		{
 			putchar(n);
 			putchar(x);
@@ -30,6 +30,7 @@ int main(void)
 		n++;
 		x = x - b;
 		b--;
+		j = 0;
 	}
 	putchar('\n');
 	return (0);
