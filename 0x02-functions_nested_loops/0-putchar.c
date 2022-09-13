@@ -1,4 +1,4 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
  * main - prints _putchar
@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-	print_putchar();
+	write(1, "_putchar\n");
 	return (0);
 }
