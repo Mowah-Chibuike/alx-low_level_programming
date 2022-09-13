@@ -9,9 +9,9 @@
  */
 void print_alphabet_x10(void)
 {
-	int count = 0;
+	int count = '0';
 
-	while (count <= 9)
+	while (count <= '9')
 	{
 		int alphabet = 'a';
 
@@ -20,6 +20,6 @@ void print_alphabet_x10(void)
 			_putchar(alphabet);
 			alphabet++;
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
