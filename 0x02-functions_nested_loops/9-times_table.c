@@ -6,7 +6,7 @@
  *
  * Return: The 9 times table
  */
-void times_table(void);
+void times_table(void)
 {
 	int i = 0;
 	int count = 0;
@@ -15,6 +15,7 @@ void times_table(void);
 	while (count <= 9)
 	{
 		int iterations = 0;
+
 		while (iterations <= 9)
 		{
 			res = (i * count) + (count * iterations);
