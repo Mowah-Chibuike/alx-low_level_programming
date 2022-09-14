@@ -8,16 +8,13 @@
  */
 void print_times_table(int n)
 {
-	int i = 0;
-	int count = 0;
-	int res;
+	int i = 0,  count = 0, res, iterations;
 
-	if ((n > 0) && (n < 15))
+	if ((n >= 0) && (n <= 15))
 	{
 		while (count <= n)
 		{
-			int iterations = 0;
-
+			iterations = 0;
 			while (iterations <= n)
 			{
 				res = ((i * count) + (count * iterations));
@@ -25,6 +22,8 @@ void print_times_table(int n)
 				{
 					_putchar((res / 10) + '0');
 					_putchar((res % 10) + '0');
+					if (res > 99)
+						_putchar(((res % 10) % 10) + '0');
 				}
 				else
 				{
