@@ -13,12 +13,12 @@ int main(void)
 	int count = 2;
 
 	printf("1, 2, ");
-	while (count <= 96)
+	while (count <= 98)
 	{
 		i = i + j;
 		j = j + i;
 		printf("%lu, %lu", i, j);
-		if (count != 96)
+		if (count != 98)
 		{
 			printf(", ");
 		}
