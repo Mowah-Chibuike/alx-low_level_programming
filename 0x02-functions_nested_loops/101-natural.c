@@ -7,7 +7,7 @@
  *
  * Return: nothing
  */
-void main(void)
+int main(void)
 {
 	int i = 0;
 	int res = 0;
@@ -21,4 +21,5 @@ void main(void)
 		i++;
 	}
 	printf("%d\n", res);
+	return (0);
 }
