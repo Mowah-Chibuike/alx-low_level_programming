@@ -20,7 +20,7 @@ void print_times_table(int n)
 				res = ((i * count) + (count * iterations));
 				if (res > 9)
 				{
-					_putchar((res / 10) + '0');
+					_putchar(((res / 10) % 10) + '0');
 					_putchar((res % 10) + '0');
 					if (res > 99)
 						_putchar(((res % 10) % 10) + '0');
