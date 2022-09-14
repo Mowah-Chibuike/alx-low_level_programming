@@ -19,8 +19,17 @@ void times_table(void)
 		while (iterations <= 9)
 		{
 			res = (i * count) + (count * iterations);
-			_putchar(res + '0');
+			if (res > 9)
+			{
+				_putchar((res / 10) + '0');
+				_putchar((res % 10) + '0');
+			}
+			else
+			{
+				_putchar(res + '0');
+			}
 			_putchar(',');
+			_putchar(' ');
 			_putchar(' ');
 			iterations++;
 		}
