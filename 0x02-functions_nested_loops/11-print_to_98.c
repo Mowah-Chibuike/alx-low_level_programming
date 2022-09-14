@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * print_to_98 - prints natural numbers from n to
@@ -33,6 +34,6 @@ void print_to_98(int n)
 		}
 		n++;
 	}
-	printf('\n');
+	_putchar('\n');
 }
 
