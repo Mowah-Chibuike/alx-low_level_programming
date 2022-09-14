@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	long long int i = 1, j = 2;
+	long int i = 1, j = 2;
 	int count = 2;
 
 	printf("1, 2, ");
@@ -17,7 +17,7 @@ int main(void)
 	{
 		i = i + j;
 		j = j + i;
-		printf("%llu, %llu", i, j);
+		printf("%lu, %lu", i, j);
 		if (count != 96)
 		{
 			printf(", ");
