@@ -29,15 +29,7 @@ void times_table(void)
 				_putchar(res + '0');
 			}
 			_putchar(',');
-			if (res > 9)
-			{
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar(' ');
-				_putchar(' ');
-			}
+			_putchar(' ');
 			iterations++;
 		}
 		_putchar('\n');
