@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prints_numbers - prints single digit numbers followed by a new line
+ * print_numbers - Prints single digit numbers
  *
  *
  * Return: void
@@ -15,6 +15,7 @@ void print_numbers(void)
 	while (i <= 9)
 	{
 		_putchar(i + '0');
+		i++;
 	}
 	_putchar('\n');
 }
