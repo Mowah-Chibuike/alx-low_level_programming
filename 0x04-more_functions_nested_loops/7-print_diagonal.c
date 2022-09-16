@@ -12,8 +12,8 @@ void print_diagonal(int n)
 {
 	while (n > 0)
 	{
-		putchar("/");
+		_putchar("/");
 		n--;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
