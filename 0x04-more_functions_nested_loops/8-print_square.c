@@ -21,7 +21,6 @@ void print_square(int size)
 			_putchar('#');
 			length--;
 		}
-		_putchar('\n');
 		if (size > 1)
 		{
 			_putchar('\n');
@@ -29,5 +28,8 @@ void print_square(int size)
 		i++;
 		size--;
 	}
-	_putchar('\n');
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
 }
