@@ -28,7 +28,7 @@ void print_triangle(int size)
 			_putchar('#');
 			count--;
 		}
-		if (size >= 1)
+		if (size > 1)
 		{
 			_putchar('\n');
 		}
