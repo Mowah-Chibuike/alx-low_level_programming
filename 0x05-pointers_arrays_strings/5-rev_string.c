@@ -11,13 +11,10 @@
 
 void rev_string(char *s)
 {
-	int len;
+	int len = 0;
 	char *str;
-	int count;
+	int count, i;
 
-	*str = *s;
-	len = 0;
-	printf("%s\n", str);
 	while (len >= 0)
 	{
 		char character;
@@ -33,6 +30,11 @@ void rev_string(char *s)
 			len++;
 		}
 	}
+	for (i = 0; i < len; i++)
+	{
+		str[i] = s[i];
+	}
+	printf("%s\n", str);
 	count = len;
 	while (count >= 0)
 	{
