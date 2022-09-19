@@ -11,9 +11,10 @@
 void rev_string(char *s)
 {
 	int len;
-	char *str = *s;
+	char *str;
 	int count;
 
+	str = *s;
 	len = 0;
 	while (len >= 0)
 	{
