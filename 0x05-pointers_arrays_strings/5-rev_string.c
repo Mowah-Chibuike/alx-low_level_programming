@@ -29,13 +29,15 @@ void rev_string(char *s)
 			len++;
 		}
 	}
-	int count = len;
+	int count;
+	
+	count = len;
 	while (count >= 0)
 	{
 		char character;
 
 		character = *(str + count);
-		*(s + (len - count) = character
+		*(s + (len - count)) = character
 	}
 	_putchar('\n');
 }
