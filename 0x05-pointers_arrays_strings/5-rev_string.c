@@ -11,11 +11,12 @@
 void rev_string(char *s)
 {
 	int len;
-	char str[];
+	char *str;
 	int count;
 
 	str = s;
 	len = 0;
+	printf("s\n", str);
 	while (len >= 0)
 	{
 		char character;
