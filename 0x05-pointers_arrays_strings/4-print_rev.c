@@ -20,6 +20,7 @@ void print_rev(char *s)
 		character = *(s + len);
 		if (character == '\0')
 		{
+			len--;
 			break;
 		}
 		else
@@ -27,7 +28,7 @@ void print_rev(char *s)
 			len++;
 		}
 	}
-	while (len > 0)
+	while (len >= 0)
 	{
 		char character;
 
