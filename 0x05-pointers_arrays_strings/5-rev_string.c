@@ -11,6 +11,7 @@
 void rev_string(char *s)
 {
 	int len;
+	char *str = s;
 
 	len = 0;
 	while (len >= 0)
@@ -28,13 +29,13 @@ void rev_string(char *s)
 			len++;
 		}
 	}
-	while (len >= 0)
+	int count = len;
+	while (count >= 0)
 	{
 		char character;
 
-		character = *(s + len);
-		_putchar(character);
-		len--;
+		character = *(str + count);
+		*(s + (len - count) = character
 	}
 	_putchar('\n');
 }
