@@ -17,7 +17,7 @@ void rev_string(char *s)
 
 	str = s;
 	len = 0;
-	printf("s\n", str);
+	printf("%s\n", str);
 	while (len >= 0)
 	{
 		char character;
