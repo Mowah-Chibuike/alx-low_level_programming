@@ -12,18 +12,19 @@
 void rev_string(char *s)
 {
 	int len = sizeof(s);
-	char *p = s;
+	char *p = &s;
 	int i = 0;
 
-	while (i <= len)
+	printf("%s\n", *p);
+	/*while (i <= len)
 	{
 		*(p + i) = *(s + i);
 		i++;
 	}
 	while (len > 0)
 	{
-		*(p + (sizeof(s) - len)) = s[len];
+		*(s + (sizeof(s) - len)) = p[len];
 		len--;
 	}
-	_putchar('\n');
+	_putchar('\n');*/
 }
