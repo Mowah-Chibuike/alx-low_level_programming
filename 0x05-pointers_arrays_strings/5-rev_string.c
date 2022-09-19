@@ -15,7 +15,7 @@ void rev_string(char *s)
 	char *str;
 	int count;
 
-	str = s;
+	*str = *s;
 	len = 0;
 	printf("%s\n", str);
 	while (len >= 0)
