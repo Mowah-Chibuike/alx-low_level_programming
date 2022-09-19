@@ -11,39 +11,13 @@
 
 void rev_string(char *s)
 {
-	int len = 0;
-	int count, i;
+	int len = sizeof(s);
+	char *p = s;
 
-	while (len >= 0)
+	while (len > 0)
 	{
-		char character;
-
-		character = *(s + len);
-		if (character == '\0')
-		{
-			len--;
-			break;
-		}
-		else
-		{
-			len++;
-		}
-	}
-	char str[len];
-
-	for (i = 0; i < len; i++)
-	{
-		str[i] = s[i];
-	}
-	printf("%s\n", str);
-	count = len;
-	while (count >= 0)
-	{
-		char character;
-
-		character = *(str + count);
-		*(s + (len - count)) = character;
-		count--;
+		*(p + (sizeof(s) - len)) = s[len];
+		len--;
 	}
 	_putchar('\n');
 }
