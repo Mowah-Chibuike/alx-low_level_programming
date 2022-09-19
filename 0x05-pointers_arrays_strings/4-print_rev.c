@@ -22,7 +22,10 @@ void print_rev(char *s)
 		{
 			break;
 		}
-		len++;
+		else
+		{
+			len++;
+		}
 	}
 	while (len >= 0)
 	{
