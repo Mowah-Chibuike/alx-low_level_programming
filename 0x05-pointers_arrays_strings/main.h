@@ -8,5 +8,6 @@ int _strlen(char *s);
 void _puts(char *str);
 void rev_string(char *s);
 void puts2(char *s);
+void puts_half(char *s);
 
 #endif /* MAIN_H */
