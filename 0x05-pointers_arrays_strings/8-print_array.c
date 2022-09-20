@@ -2,7 +2,7 @@
 
 /**
  * print_array - prints a specified number of elements in an array
- * @*a: the array that contains elements to be printed
+ * @a: the array that contains elements to be printed
  * @n: the number of elements to be printed
  *
  *
