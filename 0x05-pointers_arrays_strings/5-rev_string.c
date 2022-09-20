@@ -11,10 +11,9 @@
 
 void rev_string(char *s)
 {
-	char *p;
+	int p = sizeof(s);
 
-	p = &s; 
-	printf("%p\n", p);
+	printf("%d\n", p);
 	/*while (i <= len)
 	{
 		*(p + i) = *(s + i);
