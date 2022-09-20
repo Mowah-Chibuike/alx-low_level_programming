@@ -17,6 +17,7 @@ int get_length(char *s)
 	{
 		if (*(s + len) == '\0')
 		{
+			len--;
 			break;
 		}
 		len++;
