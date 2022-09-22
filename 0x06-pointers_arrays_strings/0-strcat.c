@@ -5,7 +5,6 @@
  * @dest: destination string
  * @src: source string
  *
- * 
  * Return: the destination string
  */
 char *_strcat(char *dest, char *src)
