@@ -15,3 +15,4 @@ iii) allowed to use _putchar
 5-string_toupper.c - function that changes all lowercase letters to upercase in a string.
 6-cap_string.c - function that capitalizes all words in a string.
 7-leet.c - function that encodes a string into 1337 format.
+
