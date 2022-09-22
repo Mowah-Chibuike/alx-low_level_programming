@@ -1,12 +1,13 @@
-#0x06. C - More pointers, arrays and strings
+0x06. C - More pointers, arrays and strings
 
-## Requirements
+Requirements
 i) Ubuntu 20.04
 ii) no standard library functions
 iii) allowed to use _putchar
 
-##Tasks
-###Mandatory
+Tasks
+
+Mandatory
 0-strcat.c - function concatenates two strings
 1-stncat.c - function that concatenates two strings up to n bytes.
 2-stncpy.c - function that copies a string.
