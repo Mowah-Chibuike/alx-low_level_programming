@@ -1,17 +1,17 @@
-#0x07. C - Even more pointers, arrays and strings
+0x07. C - Even more pointers, arrays and strings
 
-##General
+General
 - What are pointers to pointers and how to use them
 - What are multidimensional arrays and how to use them
 - What are the most common C standard library functions to manipulate strings
 
-##Requirements
+Requirements
 i) Ubuntu 20.04
 ii) no standard library functions
 iii) allowed to use _putchar
 
-##Tasks
-##Mandatory
+Tasks
+Mandatory
 0-memset.c - program fills memory with a constant byte.
 1-memcpy.c - program copies memory area.
 2-strchr.c - locates a character in a string.
