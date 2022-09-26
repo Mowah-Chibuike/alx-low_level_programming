@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -22,5 +22,5 @@ void print_diagsums(int *a, int size)
 		p = (j * size) + (size - 1 - j);
 		z += *(a + p);
 	}
-	printf("%d, %d\n", d1, d2);
+	printf("%d, %d\n", y, z);
 }
