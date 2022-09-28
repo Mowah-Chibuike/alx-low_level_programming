@@ -21,3 +21,4 @@
 - 1-print_rev_recursion.c - program prints a dtring in reverse.
 - 2-strlen_recursion.c - program returns the length of a string
 - 3-factorial.c - program returns the factorial of a given number.
+- 4-pow_recursion.c - program returns the value of a number raised to another number
