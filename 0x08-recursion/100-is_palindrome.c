@@ -18,7 +18,7 @@ int _strlen(char *s)
 }
 
 /**
- * palindome_check - function checks if a string is a palindome
+ * palindrome_check - function checks if a string is a palindome
  * @i: first index
  * @j: second index
  * @p: string to be checked
@@ -26,7 +26,7 @@ int _strlen(char *s)
  * Return: 1 if a string is a palindrome and 0 if not.
  */
 
-int palindome_check(int i, int j, char *p)
+int palindrome_check(int i, int j, char *p)
 {
 	if (i >= j)
 	{
@@ -37,7 +37,7 @@ int palindome_check(int i, int j, char *p)
 		return (0);
 	}
 
-	return (palindome_check(i + 1, j - 1, p);
+	return (palindrome_check(i + 1, j - 1, p);
 }
 
 /**
@@ -52,5 +52,5 @@ int is_palindrome(char *s)
 	int l;
 
 	l = _strlen(s) - 1;
-	return (palindome_check(0, l, s);
+	return (palindrome_check(0, l, s);
 }
