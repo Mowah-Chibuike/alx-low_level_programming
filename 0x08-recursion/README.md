@@ -22,3 +22,4 @@
 - 2-strlen_recursion.c - program returns the length of a string
 - 3-factorial.c - program returns the factorial of a given number.
 - 4-pow_recursion.c - program returns the value of a number raised to another number
+- 5-sqrt_recursion.c - program returns the square root of a number
