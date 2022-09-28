@@ -26,7 +26,7 @@ int check_sqrt(int i, int j)
  * _sqrt_recursion - calls the check_sqrt function and returns the value
  * @n: number to be checked
  *
- * Returns: the square root of a number or -1
+ * Return: the square root of a number or -1
  */
 
 int _sqrt_recursion(int n)
