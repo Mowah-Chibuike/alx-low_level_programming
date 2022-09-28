@@ -24,3 +24,6 @@
 - 4-pow_recursion.c: program returns the value of a number raised to another number
 - 5-sqrt_recursion.c: program returns the square root of a number
 - 6-is_prime_number.c: program checks if a number is prime or not
+
+#Advanced
+- 100-is_palindrome.c: program checks if a string is a palindome
