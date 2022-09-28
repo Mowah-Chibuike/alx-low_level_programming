@@ -37,7 +37,7 @@ int palindrome_check(int i, int j, char *p)
 		return (0);
 	}
 
-	return (palindrome_check(i + 1, j - 1, p);
+	return (palindrome_check(i + 1, j - 1, p));
 }
 
 /**
@@ -52,5 +52,5 @@ int is_palindrome(char *s)
 	int l;
 
 	l = _strlen(s) - 1;
-	return (palindrome_check(0, l, s);
+	return (palindrome_check(0, l, s));
 }
