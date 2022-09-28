@@ -19,7 +19,7 @@ int check_sqrt(int i, int j)
 		return (i);
 	}
 
-	return (check_sqrt(i + 1, j);
+	return (check_sqrt(i + 1, j));
 }
 
 /**
