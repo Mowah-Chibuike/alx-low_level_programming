@@ -20,3 +20,6 @@ Tasks
 	- 2-args.c: program prints all arguments it receives.
 	- 3-mul.c: program multiplies two numbers
 	- 4-add.c: program adds positive numbers
+
+- Advanced
+	- 100-change.c: prints the minimum number of coins to make change for an amount of money.
