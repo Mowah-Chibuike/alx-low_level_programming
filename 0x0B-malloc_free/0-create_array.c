@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * crete_array -  creates an array of chars, and initializes it with a
+ * create_array -  creates an array of chars, and initializes it with a
  * specific char.
  * @size: length of the array
  * @c: character to initialize the array with
