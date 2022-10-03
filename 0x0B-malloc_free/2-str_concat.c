@@ -1,9 +1,8 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * str_concat - concatenated two strings
- * @s!: first string
+ * @s1: first string
  * @s2: second string
  *
  * Return: a pointer  to a newly allocated space in memory which contains the
@@ -17,17 +16,19 @@ char *str_concat(char *s1, char *s2)
 	char *str;
 
 	if (s1 == NULL)
-		 i = 0;
+		i = 0;
 	else
 	{
-		i = strlen(s1);
+		for (i = 0; s1[i] != '\0'; i++)
+			;
 	}
 
 	if (s2 == NULL)
 		j = 0;
 	else
 	{
-		j = strlen(s2);
+		for (i = 0; s2[i] != '\0'; i++)
+			;
 	}
 
 	k = i + j + 1;
