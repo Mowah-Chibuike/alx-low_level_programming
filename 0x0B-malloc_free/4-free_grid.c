@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * free_grid: frees memory used by a 2D array of integers
+ * free_grid - frees memory used by a 2D array of integers
  * @grid: pointer to the 2D array
  * @height: number of rows in the 2D array
  *
