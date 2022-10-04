@@ -3,28 +3,26 @@
 
 /**
  * getwords - calulates the number of words in a string
- * @str: string to be checked
+ * @s: string to be checked
  *
  * Return: number of words in the string
  */
 
 int getwords(char *s)
 {
-	int i, j, count = 0;
+	int i, count = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if ((s[i] >= '!') && (s[i] <= 'z'))
+		if (s[i] == ' ')
 		{
-			for (j = 0; s[i + j] != '\0'; j++)
-			{
-				if (s[i + j] == '\t' || s[i + j] == ' ')
-					break;
-			}
-			count += 1;
-			i += j;
+			if (s[i + 1] != ' ' && s[i + 1] != '\0')
+				count++;
 		}
+		else if (i == 0)
+			count++;
 	}
+	count++;
 	return (count);
 }
 
@@ -44,10 +42,12 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	words = getwords(str);
-	arr = (char **)malloc(sizeof(char *) * (words + 1));
+	if (words == 1)
+		return (NULL);
+	arr = (char **)malloc(sizeof(char *) * words);
 	if (arr == NULL)
 		return (NULL);
-	arr[words] = NULL;
+	arr[words - 1] = NULL;
 	i = 0;
 	while (str[i])
 	{
@@ -64,7 +64,7 @@ char **strtow(char *str)
 					free(arr[k]);
 				free(arr[words]);
 				free(arr);
-				return NULL;
+				return (NULL);
 			}
 			for (length = 0; length < j; length++)
 				arr[index][length] = str[i + length];
