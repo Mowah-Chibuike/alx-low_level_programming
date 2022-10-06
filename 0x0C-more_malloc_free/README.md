@@ -13,5 +13,6 @@ Requirements
 - The only C standard library functions allowed are malloc, free and exit. Any use of functions like printf, puts, calloc, realloc etc… is forbidden
 
 Tasks
--Mandatory
-	- 0-malloc_checked.c - program allocates memory using malloc.
+- Mandatory
+	- 0-malloc_checked.c: allocates memory using malloc.
+	- 1-string_nconcat.c: concatenates two strings.
