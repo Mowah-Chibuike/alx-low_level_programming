@@ -30,20 +30,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			;
 	}
 
+	if (j < n)
+		j = n;
+
 	k = i + j + 1;
 	str = (char *)malloc(sizeof(char) * k);
 	if (str == NULL)
 		return (NULL);
 	str[i + j] = '\0';
 
-	for (l = 0; l < i; l++)
-	{
+	for (l = 0 ; l < i; l++)
 		str[l] = s1[l];
-	}
-
-	if (j < n)
-		j = n;
-
 	for (l = 0; l < j; l++)
 		str[i + l] = s2[l];
 
