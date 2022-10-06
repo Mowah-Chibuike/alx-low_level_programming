@@ -2,7 +2,7 @@
 
 /**
  * malloc_checked - allocates memory using malloc
- * b: space to be allocated
+ * @b: space to be allocated
  *
  * Return: a pointer to the allocated memory, otherwise exit with status of
  * 98
