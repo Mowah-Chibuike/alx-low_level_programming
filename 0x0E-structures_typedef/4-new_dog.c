@@ -6,7 +6,7 @@
  * @age: age of dog
  * @owner: owner of dog
  *
- * Return: pointer to dog initialized
+ * Return: pointer to dog initialized or NULL
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -14,6 +14,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	unsigned int i, nl, ol;
 	dog_t *dog;
 
+	if (name == NULL || owner == NULL)
+		return (NULL);
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
