@@ -2,6 +2,7 @@
 #define DOG_H
 
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * struct dog - initialize a new dog
  * @name: name of the dog
@@ -22,5 +23,6 @@ void print_dog(struct dog *d);
  * dog_t - Typedef for struct dog
  */
 typedef struct dog dog_t;
+dog_t *new_dog(char *name, float age, char *owner);
 
 #endif /* DOG_H */
