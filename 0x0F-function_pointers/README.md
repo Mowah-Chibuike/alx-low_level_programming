@@ -22,3 +22,6 @@ Tasks
 	- 1-array_iterator.c: executes a function given as a parameter on each element of an array.
 	- 2-int_index.c: searches an array for an integer
 	- 3-main.c: program performs simple operations.
+
+- Advanced
+	- 100-main_opcodes.c: prints he opcodes of the program
