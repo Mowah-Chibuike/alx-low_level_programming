@@ -5,8 +5,6 @@
  * get_op_func - selects the correct function to perform the operation asked by
  * the user
  * @s: operation asked by the user
- * @a: first integer
- * @b: second integer
  *
  * Return: pointer to the corresponding function
  */
