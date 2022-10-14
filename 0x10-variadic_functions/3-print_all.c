@@ -52,9 +52,11 @@ void print_string(va_list valist)
 
 	str = va_arg(valist, char*);
 	if (str)
+	{
 		printf("%s", str);
-	else
-		printf("(nil)");
+		return;
+	}
+	printf("(nil)");
 }
 
 /**
