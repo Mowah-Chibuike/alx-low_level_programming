@@ -88,12 +88,10 @@ void print_all(const char * const format, ...)
 			specifier = f[j].fm;
 			if (*specifier == format[i])
 			{
+				printf("%s", separator);
 				func = f[j].f;
 				func(args);
-				separator = "";
-				if (format[i + 1] != '\0')
-					separator = ", ";
-				printf("%s", separator);
+				separator = ", ";
 				break;
 			}
 			j++;
