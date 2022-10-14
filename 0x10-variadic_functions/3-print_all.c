@@ -4,10 +4,9 @@
 
 /**
  * print_char - prints character
- * @c: va_list object
+ * @valist: va_list object
  *
  * Return: void
- * B
  */
 void print_char(va_list valist)
 {
@@ -18,7 +17,7 @@ void print_char(va_list valist)
 
 /**
  * print_int - prints integer
- * @int: va_list object
+ * @valist: va_list object
  *
  * Return: void
  */
