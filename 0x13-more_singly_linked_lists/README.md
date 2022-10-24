@@ -25,3 +25,4 @@ Tasks
 	- 6-pop_listint.c: deletes the head node of a listint_t linked list, and returns the head nodes data (n).
 	- 7-get_nodeint.c: returns the nth node of a listint_t linked list.
 	- 8-sum_listint.c: returns the sum of all the data (n) of a listint_t linked list.
+	- 9-insert_nodeint.c: inserts a new node at a given position.
