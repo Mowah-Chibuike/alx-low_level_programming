@@ -3,6 +3,7 @@
 /**
  * add_nodeint_end - adds a new node to the end of a listint_t list
  * @head: pointer to the address of the head node
+ * @n: data to be stored in the new node
  *
  * Return: the address of the new element, or NULL if it failed
  */
