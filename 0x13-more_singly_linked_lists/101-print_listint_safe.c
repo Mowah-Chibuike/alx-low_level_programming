@@ -7,7 +7,7 @@
  * @size: size of the new array
  * @new: new child to be add to the arrays of pointers
  *
- * Return: a pointer to the concatenated array 
+ * Return: a pointer to the concatenated array
  */
 const listint_t **rm(const listint_t **old, size_t size, const listint_t *new)
 {
