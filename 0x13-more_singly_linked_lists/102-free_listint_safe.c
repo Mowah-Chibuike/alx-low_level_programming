@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * rm - reallocattes memory for a bigger array of pointers to listint_t types
+ * reallocate - reallocates memory for a bigger array of pointers to listint_t
+ * types
  * @oldlist: list to be appended to
  * @size: size of new list
  * @new: new pointer to be added
