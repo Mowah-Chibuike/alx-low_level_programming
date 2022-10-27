@@ -33,9 +33,11 @@ void print_binary(unsigned long int n)
 		_putchar(n + '0');
 		return;
 	}
-	for (i = 31; i >= 0; i--)
+	for (i = 32; i >= 0; i--)
 	{
 		exponent = _pow(2, i);
+		if (i == 32)
+			exponent--;
 		if (exponent <= n)
 		{
 			sum += exponent;
