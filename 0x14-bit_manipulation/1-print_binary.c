@@ -28,6 +28,11 @@ void print_binary(unsigned long int n)
 	unsigned long int sum = 0, exponent;
 	int i;
 
+	if (n == 0 || n == 1)
+	{
+		_putchar(n + '0');
+		return;
+	}
 	for (i = 31; i >= 0; i--)
 	{
 		exponent = _pow(2, i);
