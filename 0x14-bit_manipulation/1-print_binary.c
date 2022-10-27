@@ -37,7 +37,7 @@ void print_binary(unsigned long int n)
 	for (i = 31; i >= 0; i--)
 	{
 		exponent = _pow(2, i);
-		if (exponent < n)
+		if (exponent <= n)
 		{
 			sum += exponent;
 			if (sum > n)
