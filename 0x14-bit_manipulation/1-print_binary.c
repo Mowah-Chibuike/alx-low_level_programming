@@ -1,22 +1,5 @@
 #include "main.h"
-#include <limits.h>
-
-/**
- * _pow - calculates the result of a number to the power of another number
- * @base: base number
- * @power: power of the base number
- *
- * Return: the result of the base to the power of power
- */
-unsigned long int _pow(int base, int power)
-{
-	unsigned int result = 1;
-	int i;
-
-	for (i = 0; i < power; i++)
-		result *= base;
-	return (result);
-}
+#include <stdio.h>
 
 /**
  * print_binary - prints the binary representation of a number.
@@ -26,27 +9,29 @@ unsigned long int _pow(int base, int power)
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int sum = 0, exponent;
-	int i;
+	signed long int size;
+	int flag = 0;
+	char num;
 
-	if (n == 0 || n == 1)
+	if (n == 1 || n == 0)
 	{
 		_putchar(n + '0');
 		return;
 	}
-	for (i = 31; i >= 0; i--)
+	size = sizeof(n) * 8 - 1;
+	while (size >= 0)
 	{
-		exponent = _pow(2, i);
-		if (exponent <= n)
+		num = (n >> size) & 1;
+		if (flag == 1)
+			_putchar(num + '0');
+		else
 		{
-			sum += exponent;
-			if (sum > n)
+			if (num != 0)
 			{
-				sum -= exponent;
-				_putchar('0');
+				_putchar(num + '0');
+				flag = 1;
 			}
-			else
-				_putchar('1');
 		}
+		size--;
 	}
 }
