@@ -24,3 +24,4 @@ Tasks
 	- 5-flip_bits.c: returns the number of bits you would need to flip to get from one number to another.
 
 - Advanced
+	- 100-get_endianness.c: returns the endianness of a processor
