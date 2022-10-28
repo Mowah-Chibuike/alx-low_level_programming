@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * set_bit: sets the value of a bit to 1 at any given index
+ * set_bit - sets the value of a bit to 1 at any given index
  * @n: pointer to the integer whose bit you want to set to 1
  * @index: the indesx starting from 0 of the bit you want to set
  *
