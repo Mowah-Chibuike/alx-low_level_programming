@@ -20,9 +20,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	buff = (char *)malloc(sizeof(char) * letters);
+	buff = (char *)malloc(sizeof(char) * (letters + 1));
 	if (buff == NULL)
 		return (0);
+	buff[letters] = '\0';
 	print = read(fd, buff, letters);
 	if (print == -1)
 		return (0);
