@@ -29,13 +29,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buff);
 		return (0);
 	}
-	written = write(STDOUT_FILENO, buff, letters);
+	if (print > 0)
+	{
+		written = write(STDOUT_FILENO, buff, print);
+	}
 	if (written == -1 || written < print)
 	{
 		free(buff);
 		return (0);
 	}
-	close(fd);
+	written = close(fd);
+	if (written < 0)
+	{
+		free(buff);
+		return (0);
+	}
 	free(buff);
 	return (print);
 }
