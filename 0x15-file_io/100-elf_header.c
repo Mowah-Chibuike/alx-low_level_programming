@@ -97,7 +97,11 @@ void print_magic(void *struct_ptr, int flag)
 	}
 	printf("  Magic:   ");
 	for (i = 0; i < 16; i++)
-		printf("%.2x ", mgc[i]);
+	{
+		printf("%.2x", mgc[i]);
+		if (i < 15)
+			printf(" ");
+	}
 	printf("\n");
 }
 
