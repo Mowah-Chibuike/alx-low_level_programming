@@ -451,11 +451,6 @@ int main(int argc, char *argv[])
 	check_file_type(struct_ptr, flag);
 	printf("ELF Header:\n");
 	print_file_header(struct_ptr, flag);
-	ret = close(fd);
-	if (ret < 1)
-	{
-		perror("Error");
-		exit(98);
-	}
+	close(fd);
 	return (0);
 }
