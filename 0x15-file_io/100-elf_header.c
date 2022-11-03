@@ -158,8 +158,8 @@ void print_data(void *struct_ptr, int flag)
 	Elf64_Ehdr *struct2;
 	macro_t macro_list[] = {
 		{ELFDATANONE, "Unknown data format"},
-		{ELFDATA2LSB, "2's complement, little-endian"},
-		{ELFDATA2MSB, "2's complement, big-endian"},
+		{ELFDATA2LSB, "2's complement, little endian"},
+		{ELFDATA2MSB, "2's complement, big endian"},
 		{-1, NULL}
 	};
 
