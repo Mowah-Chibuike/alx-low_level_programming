@@ -248,7 +248,7 @@ void print_os_abi(void *struct_ptr, int flag)
 	Elf32_Ehdr *struct1;
 	Elf64_Ehdr *struct2;
 	macro_t macro_list[] = {
-		{ELFOSABI_NONE, "UNIX - System V"},
+		{ELFOSABI_NONE, "<unknown: 53>"},
 		{ELFOSABI_SYSV, "UNIX - System V"},
 		{ELFOSABI_HPUX, "UNIX - HP-UX"},
 		{ELFOSABI_NETBSD, "UNIX - NetBSD"},
@@ -451,6 +451,11 @@ int main(int argc, char *argv[])
 	check_file_type(struct_ptr, flag);
 	printf("ELF Header:\n");
 	print_file_header(struct_ptr, flag);
-	close(fd);
+	ret = close(fd);
+	if (ret < 1)
+	{
+		perror("Error");
+		exit(98);
+	}
 	return (0);
 }
