@@ -32,7 +32,7 @@ void check_file_type(void *struct_ptr, int flag)
 	}
 	if (mgc[0] != 0x7f && mgc[1] != 0x45 && mgc[2] != 0x4c && mgc[3] != 0x45)
 	{
-		dprintf(2, "%s\n", err);
+		dprintf(2, "elf_header: %s\n", err);
 		free(struct_ptr);
 		exit(98);
 	}
@@ -56,7 +56,7 @@ void *read_file(int fd, int flag)
 		struct_ptr = (Elf64_Ehdr *)malloc(sizeof(Elf64_Ehdr));
 	if (struct_ptr == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: %s\n", strerror(errno));
+		dprintf(STDERR_FILENO, "elf_header: Error: %s\n", strerror(errno));
 		exit(98);
 	}
 	if (flag)
@@ -65,7 +65,7 @@ void *read_file(int fd, int flag)
 		ret = read(fd, struct_ptr, sizeof(Elf32_Ehdr));
 	if (ret < 0)
 	{
-		perror("Error");
+		perror("elf_header: Error");
 		free(struct_ptr);
 		close(fd);
 		exit(98);
@@ -248,7 +248,7 @@ void print_os_abi(void *struct_ptr, int flag)
 	Elf32_Ehdr *struct1;
 	Elf64_Ehdr *struct2;
 	macro_t macro_list[] = {
-		{ELFOSABI_NONE, "<unknown: 53>"},
+		{ELFOSABI_NONE, "UNIX - System V"},
 		{ELFOSABI_SYSV, "UNIX - System V"},
 		{ELFOSABI_HPUX, "UNIX - HP-UX"},
 		{ELFOSABI_NETBSD, "UNIX - NetBSD"},
@@ -279,10 +279,11 @@ void print_os_abi(void *struct_ptr, int flag)
 		if (mgc[7] == macro_list[i].number)
 		{
 			printf("%s\n", macro_list[i].string);
-			break;
+			return;
 		}
 		i++;
 	}
+	printf("<unknown: %d\n", mgc[7]);
 }
 
 /**
@@ -438,13 +439,13 @@ int main(int argc, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		perror("Error");
+		dprintf(2, "%s: Error: '%s': %s\n", argv[0], argv[1], strerror(errno));
 		exit(98);
 	}
 	ret = lseek(fd, 0, SEEK_SET);
 	if (ret < 0)
 	{
-		perror("Error");
+		printf("%s: Error: %s\n", argv[0], strerror(errno));
 		exit(98);
 	}
 	struct_ptr = read_file(fd, flag);
