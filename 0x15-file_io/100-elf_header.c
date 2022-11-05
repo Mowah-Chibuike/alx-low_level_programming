@@ -84,7 +84,7 @@ void print_magic(void *struct_ptr, int flag)
 	unsigned char *mgc;
 	Elf32_Ehdr *struct1;
 	Elf64_Ehdr *struct2;
-	
+
 	if (!flag)
 	{
 		struct1 = (Elf32_Ehdr *)struct_ptr;
@@ -249,7 +249,6 @@ void print_os_abi(void *struct_ptr, int flag)
 		{ELFOSABI_STANDALONE, "Stand-alone (embedded)"},
 		{-1, NULL}
 	};
-
 	if (!flag)
 	{
 		struct1 = (Elf32_Ehdr *)struct_ptr;
@@ -261,17 +260,13 @@ void print_os_abi(void *struct_ptr, int flag)
 		mgc = struct2->e_ident;
 	}
 	printf("  OS/ABI:                            ");
-	i = 0;
-	while (macro_list[i].number >= 0)
-	{
+	for (i = 0; macro_list[i].number >= 0; i++)
 		if (mgc[7] == macro_list[i].number)
 		{
 			printf("%s\n", macro_list[i].string);
 			return;
 		}
-		i++;
-	}
-	printf("\n");
+	printf("<unknown: %d>\n", mgc[7]);
 }
 
 /**
