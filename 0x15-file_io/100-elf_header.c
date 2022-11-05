@@ -369,19 +369,22 @@ void print_entry_point(void *struct_ptr, int flag)
 {
 	Elf32_Ehdr *struct1;
 	Elf64_Ehdr *struct2;
-	unsigned long int address;
+	unsigned int address1;
+	unsigned long int address2;
 
-	if (!flag)
+	(void)flag;
+	if (sizeof(struct1->e_entry) == sizeof(uint32_t))
 	{
 		struct1 = (Elf32_Ehdr *)struct_ptr;
-		address = (uint32_t)struct1->e_entry;
+		address1 = (uint32_t)struct1->e_entry;
+		printf("  Entry point address:               0x%x\n", address1);
 	}
 	else
 	{
 		struct2 = (Elf64_Ehdr *)struct_ptr;
-		address = (uint64_t)struct2->e_entry;
+		address2 = (uint64_t)struct2->e_entry;
+		printf("  Entry point address:               0x%lx\n", address2);
 	}
-	printf("  Entry point address:               0x%lx\n", address);
 }
 
 /**
