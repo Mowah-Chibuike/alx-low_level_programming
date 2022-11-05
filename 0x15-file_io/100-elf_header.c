@@ -199,15 +199,10 @@ void print_data(void *struct_ptr, int flag)
  */
 void print_version(void *struct_ptr, int flag)
 {
-	int i, number;
+	int number;
 	unsigned char *mgc;
 	Elf32_Ehdr *struct1;
 	Elf64_Ehdr *struct2;
-	macro_t macro_list[] = {
-		{EV_NONE, "0"},
-		{EV_CURRENT, "1"},
-		{-1, NULL}
-	};
 
 	if (!flag)
 	{
@@ -219,22 +214,11 @@ void print_version(void *struct_ptr, int flag)
 		struct2 = (Elf64_Ehdr *)struct_ptr;
 		mgc = struct2->e_ident;
 	}
-	printf("  Version:                           ");
-	i = 0;
-	while (macro_list[i].number >= 0)
-	{
-		if (mgc[6] == macro_list[i].number)
-		{
-			number = macro_list[i].number;
-			printf("%s", macro_list[i].string);
-			if (number == 1)
-				printf(" (current)");
-			printf("\n");
-			return;
-		}
-		i++;
-	}
-	printf("0\n");
+	number = mgc[6];
+	printf("  Version:                           %d", number);
+	if (number == EV_CURRENT)
+		printf(" (current)");
+	printf("\n");
 }
 
 /**
@@ -287,7 +271,7 @@ void print_os_abi(void *struct_ptr, int flag)
 		}
 		i++;
 	}
-	printf("<unknown: %d\n", mgc[7]);
+	printf("\n");
 }
 
 /**
