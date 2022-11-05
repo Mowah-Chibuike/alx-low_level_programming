@@ -353,7 +353,7 @@ void print_entry_point(void *struct_ptr, int flag)
 	Elf32_Ehdr *struct1;
 	Elf64_Ehdr *struct2;
 	signed int address1;
-	unsigned long int address2;
+	signed long int address2;
 
 	(void)flag;
 	if (sizeof(struct1->e_entry) == sizeof(uint32_t))
