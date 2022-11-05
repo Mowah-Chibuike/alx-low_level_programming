@@ -204,8 +204,8 @@ void print_version(void *struct_ptr, int flag)
 	Elf32_Ehdr *struct1;
 	Elf64_Ehdr *struct2;
 	macro_t macro_list[] = {
-		{EV_NONE, "(invalid)"},
-		{EV_CURRENT, "(current)"},
+		{EV_NONE, "0"},
+		{EV_CURRENT, "1"},
 		{-1, NULL}
 	};
 
@@ -226,11 +226,15 @@ void print_version(void *struct_ptr, int flag)
 		if (mgc[6] == macro_list[i].number)
 		{
 			number = macro_list[i].number;
-			printf("%d %s\n", number, macro_list[i].string);
-			break;
+			printf("%s", macro_list[i].string);
+			if (number == 1)
+				printf(" (current)");
+			printf("\n");
+			return;
 		}
 		i++;
 	}
+	printf("0\n");
 }
 
 /**
@@ -369,7 +373,7 @@ void print_entry_point(void *struct_ptr, int flag)
 {
 	Elf32_Ehdr *struct1;
 	Elf64_Ehdr *struct2;
-	unsigned int address1;
+	signed int address1;
 	unsigned long int address2;
 
 	(void)flag;
