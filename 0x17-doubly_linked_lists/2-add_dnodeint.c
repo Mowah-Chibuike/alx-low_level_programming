@@ -22,7 +22,7 @@ dlistint_t *create_new_node(int n)
 /**
  * add_dnodeint - adds a new node at the beginning of a dlistint_t list.
  * @head: double pointer to the head node
- * n: integer to be added to the new node in the linked list
+ * @n: integer to be added to the new node in the linked list
  *
  * Return: the address of the new element, or NULL if it failed
  */
