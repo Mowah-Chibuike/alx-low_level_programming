@@ -32,10 +32,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		temp = temp->next;
 	}
 	if (temp == NULL)
-	{
-		printf("Hello %d\n", i);
 		return (-1);
-	}
 	prev = temp->prev;
 	next = temp->next;
 	prev->next = next;
