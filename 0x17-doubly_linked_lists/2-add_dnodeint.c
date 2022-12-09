@@ -6,7 +6,7 @@
  *
  * Return: the address of the new node, or NULL if it failed
  */
-dlistint_t *create_new_node(int n)
+dlistint_t *create_node(int n)
 {
 	dlistint_t *newNode;
 
@@ -30,7 +30,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *newNode;
 
-	newNode = create_new_node(n);
+	newNode = create_node(n);
 	if (newNode == NULL)
 		return (NULL);
 	if (*head == NULL)
