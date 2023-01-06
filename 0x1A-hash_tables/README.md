@@ -20,4 +20,5 @@ Requirements
 
 Tasks
 - Mandatory
-	- 0-hash_table_create.c: a function that creates a hash table.
+	- 0-hash_table_create.c: contains a function that creates a hash table.
+	- 1-djb2.c: contains a hash function implementing the djb2 algorithm.
