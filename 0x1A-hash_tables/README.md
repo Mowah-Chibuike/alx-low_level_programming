@@ -25,3 +25,4 @@ Tasks
 	- 2-key_index.c: contains a function that gives you the index of a key.
 	- 3-hash_table_set.c: contains a function that adds an element to the hash table.
 	- 4-hash_table_get.c: contains a function that retrieves a value associated with a key in a hash table.
+	- 5-hash_table_print.c: contains a function that prints a hash_tabl.e
