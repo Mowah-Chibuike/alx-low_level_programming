@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * check_for_key: checks if a key is already stored in a hash table
+ * check_for_key - checks if a key is already stored in a hash table
  * @ht: hash table
  * @idx: index of the key to be searched for
  * @key: key to be searched for
@@ -68,7 +68,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (strlen(key) == 0)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
-	if ((element = check_for_key(ht, index, (char *)key)) == NULL)
+	element = check_for_key(ht, index, (char *)key);
+	if (element == NULL)
 	{
 		new_key = strdup(key);
 		new_value = strdup(value);
