@@ -18,7 +18,9 @@ def find_path(values, row, col, checked, grid, grid_state):
     position = (row, col)
     if position in checked:
         return
-    if row in range(grid_state[0]) and col in range(grid_state[1]) and grid[row][col] == 1:
+    if row in range(
+            grid_state[0]) and col in range(
+                    grid_state[1]) and grid[row][col] == 1:
         checked.append(position)
         if row == 0 or grid[row-1][col] == 0:
             cell_sum += 1
@@ -36,6 +38,14 @@ def find_path(values, row, col, checked, grid, grid_state):
 
 
 def island_perimeter(grid):
+    """
+    returns the perimeter of the island described in grid.
+    grid is a list of list of integers:
+        - 0 represents a water zone
+        - 1 represents a land zone
+        - One cell is a square with side length 1
+        - Grid cells are connected horizontally/vertically (not diagonally).
+    """
     grid_state = (len(grid), len(grid[0]))
     values = []
     first = ()
@@ -50,5 +60,4 @@ def island_perimeter(grid):
     if not first:
         return 0
     find_path(values, first[0], first[1], checked, grid, grid_state)
-    print(values)
     return sum(values)
