@@ -24,7 +24,7 @@ def find_path(values, row, col, checked, grid, grid_state):
         checked.append(position)
         if row == 0 or grid[row-1][col] == 0:
             cell_sum += 1
-        if row == grid_state[0]-1 or grid[row-1][col] == 0:
+        if row == grid_state[0]-1 or grid[row+1][col] == 0:
             cell_sum += 1
         if col == 0 or grid[row][col-1] == 0:
             cell_sum += 1
