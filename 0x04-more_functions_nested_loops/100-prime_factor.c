@@ -28,5 +28,5 @@ int main(void)
 		odd_number += 2;
 	}
 	printf("%d\n", max_prime);
-	return (1);
+	return (0);
 }
