@@ -9,28 +9,21 @@
  */
 int main(void)
 {
-	int n = 48;
-	int x = 49;
-	int j = 0, i = 0, b = 8;
+	int i, j;
 
-	while (i <= b && b != -1)
+	i = j = 0;
+	for (i = 0; i < 10; i++)
 	{
-		while (b >= j)
+		for (j = i + 1; j < 10; j++)
 		{
-			putchar(n);
-			putchar(x);
-			if (n != 56 || x != 57)
+			if (!(i == 0 && j == 1))
 			{
 				putchar(',');
 				putchar(' ');
 			}
-			x++;
-			j++;
+			putchar(i + '0');
+			putchar(j + '0');
 		}
-		n++;
-		x = x - b;
-		b--;
-		j = 0;
 	}
 	putchar('\n');
 	return (0);

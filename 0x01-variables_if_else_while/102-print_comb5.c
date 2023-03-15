@@ -8,43 +8,42 @@
  */
 int main(void)
 {
-	int i;
-	int j;
-	int k;
-	int l;
+	int i, j, multiplier;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i < 100; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (j = i + 1; j < 100; j++)
 		{
-			for (k = 0; k <= 9; k++)
+			if (!(i == 0 && j == 1))
 			{
-				for (l = j + 1; l <= 9; l++)
-				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(l + '0');
-					if ((i == 9)
-					&& (j == 8)
-					&& (k == 9)
-					&& (l == 9))
-					{
-						putchar('\n');
-					}
-					else
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
-			if ((i == 9) && (j == 8))
+			if (i < 10)
+				putchar('0');
+			if (i > 9)
+				multiplier = 10;
+			else
+				multiplier = 1;
+			while (multiplier > 0)
 			{
-				j += 1;
+				putchar(((i / multiplier) % 10) + '0');
+				multiplier /= 10;
+			}
+			putchar(' ');
+			if (j < 10)
+				putchar('0');
+			if (j > 9)
+				multiplier = 10;
+			else
+				multiplier = 1;
+			while (multiplier > 0)
+			{
+				putchar(((j / multiplier) % 10) + '0');
+				multiplier /= 10;
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }

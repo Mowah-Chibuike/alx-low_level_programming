@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - prints three-digit numbers
+ * main - prints numbers
  *
- * Description: This function prints all
- * possible combinations of single-digit
- * numbers to make three-digit numbers
+ *
  * Return: 0 if successful
  */
 int main(void)
@@ -14,29 +12,23 @@ int main(void)
 	int j;
 	int k;
 
-	for (i = 0; i <= 7; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = i + 1; j <= 8; j++)
+		for (j = i + 1; j < 10; j++)
 		{
-			for (k = j + 1; k <= 9; k++)
+			for (k = j + 1; k < 10; k++)
 			{
-				if ((i != j) && (i != k))
+				if (!(i == 0 && j == 1 && k == 2))
 				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(k + '0');
-					if ((i == 7) && (j == 8) && (k == 9))
-					{
-						putchar('\n');
-					}
-					else
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
