@@ -38,8 +38,8 @@ int jump_search(int *array, size_t size, int value)
 			continue;
 		}
 	}
-	hi = hi > (int)size ? (int)size : hi;
-	for (; lo <= hi && lo < (int)size; lo++)
+	hi = hi > (int)size ? (int)size : hi + 1;
+	for (; lo < hi && lo < (int)size; lo++)
 	{
 		printf("Value checked array[%d] = %d\n", lo, array[lo]);
 		if (array[lo] == value)
