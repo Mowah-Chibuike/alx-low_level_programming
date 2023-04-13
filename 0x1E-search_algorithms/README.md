@@ -25,3 +25,6 @@
 - 3-O: contains the space complexity of the Linear search algorithm
 - 4-O: contains the time complexity of the Binary search algorithm
 - 5-O: contains the space complexity of the Binary search algorithm
+
+### Advanced
+- 100-jump.c: searches for a value in a sorted array of integers using the Jump search algorithm
